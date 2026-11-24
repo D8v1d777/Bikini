@@ -10,14 +10,11 @@ Create an original, premium swimwear / bikini fashion brand experience from a bl
 
 Do not use “Bikini” as the consumer-facing brand name merely because it is the repository name. Invent a distinctive, ownable-sounding name. Do not copy an existing fashion label, campaign, website, logo, or visual identity.
 
-The chosen creative direction is a **hybrid cinematic fashion experience**:
-- Monolith / editorial brutalism as a starting sensibility, not a rigid template.
-- High-fashion campaign storytelling.
-- A genuinely usable premium storefront.
-- Selective, purposeful 3D and motion graphics.
-- Original AI-generated fashion campaign imagery.
+The agreed ambition is a **hybrid cinematic fashion experience**: a distinctive fashion world with the emotional impact of a campaign and the clarity and usefulness of a premium storefront. Treat “cinematic” as an ambition for image-making, pacing and atmosphere—not as a prescribed visual genre.
 
-The result should feel like a credible, desirable fashion label—not a developer portfolio, generic Shopify theme, template clone, or a collection of effects.
+No specific aesthetic has been selected. Brutalism, minimalism, resort imagery, surrealism, colour, restraint, maximalism, 3D, or an entirely different direction are all possibilities, not requirements. Explore before committing. Do not let the repository name, these documents, a trend, or a reference site decide the brand's identity for you.
+
+The result should feel like a credible, desirable fashion label—not a developer portfolio, generic commerce template, template clone, or a collection of effects.
 
 ## Creative autonomy
 
@@ -49,19 +46,15 @@ Build a coherent campaign cast:
 
 If image-generation capability is unavailable, do not silently substitute random internet photos. Create a precise asset manifest with prompts, intended aspect ratios, filenames and placement notes, and clearly report the missing assets.
 
-## Experience to create
+## Experience outcomes
 
-Design the complete customer-facing experience, not just a hero landing page. Use creative judgement to establish the exact information architecture, but consider these essential moments:
+Create a complete, coherent customer-facing experience rather than a decorative landing page. The visitor should be able to understand the brand, become interested in its world, discover the swimwear, evaluate a product, and complete a convincing simulated shopping journey.
 
-1. **Opening / hero** — a memorable first viewport, strong campaign image or purposeful 3D composition, distinctive brand typography, concise brand proposition and clear route into the collection.
-2. **Editorial campaign storytelling** — a sequence of visually rich sections that makes the label feel like a real fashion house.
-3. **Collection discovery** — a well-merchandised collection grid with strong photography, coherent product cards and useful filtering or sorting if it improves the experience.
-4. **Product detail experience** — image gallery, product story, available colours, size selection, fit / care information, price, and clear add-to-bag interaction.
-5. **Simulated commerce** — fully frontend-only interactions described below.
-6. **Brand / craft section** — materials, construction, design philosophy, fit or care details, and other credible brand content.
-7. **Footer and supporting navigation** — complete navigation, contact / social placeholders clearly marked as fictional if invented, newsletter interaction simulated locally if included.
+Those are outcomes, not a prescribed sitemap or section order. Decide what pages, scenes, transitions, navigation and content the concept actually needs. You may combine, reorder, reinterpret or omit conventional sections when the brand idea gives you a stronger solution.
 
-Make the page feel authored and intentional from top to bottom. Avoid repeating the same card pattern in every section.
+The experience must make product discovery and product evaluation clear. Where relevant, visitors need useful product imagery, product information, variant and size selection, and a clear way to add an item to the bag. Include credible brand information and complete navigation in a form that belongs to the concept.
+
+Do not build a generic sequence of “hero, cards, story, grid, footer” simply because it is familiar. Let the brand concept determine the structure while keeping the shopping journey understandable.
 
 ## Simulated shopping interactions
 
@@ -93,7 +86,7 @@ Useful reference research:
 - The Renaissance Edition (editorial commerce / generative visual storytelling reference): https://www.shopify.com/editions/winter2026
 - Floema (immersive 3D product storytelling reference): use its Awwwards case study as a technique reference, not a design to reproduce.
 
-Look for a distinctive signature idea: one memorable visual or interaction concept that belongs to this invented brand. Use motion to communicate the brand and guide attention—not as decoration on every element.
+Look for a distinctive signature idea: a memorable visual, narrative, interaction or combination that belongs to this invented brand. It does not have to be 3D, technically elaborate, or even animated. Use motion only when it communicates the brand, improves understanding or guides attention.
 
 Potential craft ingredients, only where they genuinely serve the concept:
 - Confident typographic scale and editorial grid-breaking.
@@ -177,11 +170,8 @@ Provide:
 **Success means:** the result feels like a distinctive premium swimwear brand, the frontend itself demonstrates exceptional craft, shopping interactions are convincing but safely simulated, and the owner receives an honest, actionable debugging report.
 
 
-## Companion creative guidance
+## Companion guidance
 
-Read these two companion documents before beginning. They are deliberately open-ended: use them to widen your thinking and improve your process, not as a rigid visual specification.
+Read [Fable Work Method](docs/FABLE_WORK_METHOD.md) and [Creative Sparks](docs/CREATIVE_SPARKS.md) before beginning. They describe a flexible way to explore, make, critique and improve the work. They are not a sitemap, moodboard, fixed art direction or checklist of visual ingredients.
 
-- [Fable Work Method](docs/FABLE_WORK_METHOD.md) — a creative-studio approach to discovery, experimentation, browser-based critique, iterative refinement and honest final verification.
-- [Creative Sparks](docs/CREATIVE_SPARKS.md) — unconventional territories, visual collisions and questions intended to provoke original brand ideas. They are prompts for imagination, not a checklist.
-
-**Priority rule:** this brief defines the assignment and boundaries; the companion files encourage stronger creative thinking. Where a spark conflicts with the brief's frontend-only scope, safety requirements or simulated-commerce boundary, the brief takes precedence. Do not mechanically combine every idea. Choose an original direction and execute it with conviction.
+The brief defines the assignment and responsibility boundaries. The companion documents are optional creative provocation. None of these documents should predetermine the brand's aesthetic. If a suggestion does not strengthen the concept, discard it.

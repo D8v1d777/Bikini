@@ -175,3 +175,13 @@ Provide:
 - Any work intentionally left undone because it crossed the technical responsibility boundary.
 
 **Success means:** the result feels like a distinctive premium swimwear brand, the frontend itself demonstrates exceptional craft, shopping interactions are convincing but safely simulated, and the owner receives an honest, actionable debugging report.
+
+
+## Companion creative guidance
+
+Read these two companion documents before beginning. They are deliberately open-ended: use them to widen your thinking and improve your process, not as a rigid visual specification.
+
+- [Fable Work Method](docs/FABLE_WORK_METHOD.md) — a creative-studio approach to discovery, experimentation, browser-based critique, iterative refinement and honest final verification.
+- [Creative Sparks](docs/CREATIVE_SPARKS.md) — unconventional territories, visual collisions and questions intended to provoke original brand ideas. They are prompts for imagination, not a checklist.
+
+**Priority rule:** this brief defines the assignment and boundaries; the companion files encourage stronger creative thinking. Where a spark conflicts with the brief's frontend-only scope, safety requirements or simulated-commerce boundary, the brief takes precedence. Do not mechanically combine every idea. Choose an original direction and execute it with conviction.

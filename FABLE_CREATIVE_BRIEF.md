@@ -80,11 +80,13 @@ Useful reference research:
 - Awwwards award-winning website index: https://www.awwwards.com/websites/
 - Awwwards fashion category: https://www.awwwards.com/websites/fashion/
 - Awwwards e-commerce category: https://www.awwwards.com/websites/e-commerce/
-- Award-winning work and stack examples: https://teasertrack.cc/websites
-- Recent award teardown / craft analysis: https://rickcreates.com/
-- Naked City Films (industrial editorial + WebGL reference): https://www.nakedcityfilms.com/
-- The Renaissance Edition (editorial commerce / generative visual storytelling reference): https://www.shopify.com/editions/winter2026
-- Floema (immersive 3D product storytelling reference): use its Awwwards case study as a technique reference, not a design to reproduce.
+- Award-winning work and disclosed stack examples: https://teasertrack.cc/websites
+- Browser-based award-site teardowns and craft analysis: https://rickcreates.com/
+- Naked City Films: https://www.nakedcityfilms.com/ — study filmic pacing and motion as structure, not its specific visual identity.
+- Floema: https://floema.com/en — study how a product-first catalogue and brand storytelling can coexist; it is a furniture brand, not a swimwear reference.
+- Floema interaction breakdown: https://animorio.com/en/journal/floema-how-its-made/ — a third-party technical/design analysis, useful for understanding interaction patterns rather than copying them.
+
+These are optional starting points, not a ranked list or a prescribed visual direction. Verify any reference directly before relying on claims about its awards, technology or implementation.
 
 Look for a distinctive signature idea: a memorable visual, narrative, interaction or combination that belongs to this invented brand. It does not have to be 3D, technically elaborate, or even animated. Use motion only when it communicates the brand, improves understanding or guides attention.
 

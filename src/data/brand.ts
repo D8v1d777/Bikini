@@ -9,7 +9,7 @@ export const COLLECTIONS: Collection[] = [
     id: 'monolith',
     name: 'MONOLITH',
     description: 'Carved from shadow. The inaugural collection explores monolithic form — single-piece architecture, hardware-free closures, and a palette drawn from volcanic mineral.',
-    campaignImage: '/images/campaign/monolith-hero.jpg',
+    campaignImage: '/images/campaign/solun/monolith-editorial.webp',
     campaignAlt: 'Monolith collection campaign — model in volcanic sand bikini against basalt formations',
     products: ['monolith-one', 'monolith-two', 'monolith-three'],
     color: '#4a3f36'
@@ -18,7 +18,7 @@ export const COLLECTIONS: Collection[] = [
     id: 'lumen',
     name: 'LUMEN',
     description: 'Light as structure. Translucent layers, refractive edges, and a colour story of dawn on water. Fabric that catches and releases light with every movement.',
-    campaignImage: '/images/campaign/lumen-hero.jpg',
+    campaignImage: '/images/campaign/solun/lumen-coastal-blue.webp',
     campaignAlt: 'Lumen collection campaign — model in pearlescent bikini at water\'s edge, morning light',
     products: ['lumen-one', 'lumen-two', 'lumen-three'],
     color: '#e8e2d8'
@@ -27,7 +27,7 @@ export const COLLECTIONS: Collection[] = [
     id: 'strata',
     name: 'STRATA',
     description: 'Sedimentary logic. Layered construction, tonal depth, and hardware inspired by geological folding. The most technical collection — built for motion, shaped by time.',
-    campaignImage: '/images/campaign/strata-hero.jpg',
+    campaignImage: '/images/campaign/solun/strata-pool-editorial.webp',
     campaignAlt: 'Strata collection campaign — model in layered terracotta bikini against sedimentary cliffs',
     products: ['strata-one', 'strata-two', 'strata-three'],
     color: '#85735a'

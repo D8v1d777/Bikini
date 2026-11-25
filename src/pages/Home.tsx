@@ -6,7 +6,7 @@ import type { Collection, Product } from '../types/index.ts';
 const HERO_SLIDES = [
   {
     id: 'slide-1',
-    image: '/images/hero/hero-1.jpg',
+    image: '/images/campaign/solun/hero-pool-closeup.webp',
     alt: 'SOLUN Monolith collection — model in obsidian bikini against basalt formations',
     headline: 'CARVED FROM SHADOW',
     subtext: 'The Monolith Collection',
@@ -15,7 +15,7 @@ const HERO_SLIDES = [
   },
   {
     id: 'slide-2',
-    image: '/images/hero/hero-2.jpg',
+    image: '/images/campaign/solun/hero-coastal-green.webp',
     alt: 'SOLUN Lumen collection — model in pearlescent bikini at water\'s edge',
     headline: 'LIGHT AS STRUCTURE',
     subtext: 'The Lumen Collection',
@@ -24,12 +24,29 @@ const HERO_SLIDES = [
   },
   {
     id: 'slide-3',
-    image: '/images/hero/hero-3.jpg',
+    image: '/images/campaign/solun/hero-campaign-grid.webp',
     alt: 'SOLUN Strata collection — model in layered terracotta bikini against sedimentary cliffs',
     headline: 'SEDIMENTARY LOGIC',
     subtext: 'The Strata Collection',
     cta: 'EXPLORE STRATA',
     href: '/collections/strata'
+  }
+];
+
+const CAMPAIGN_STUDIES = [
+  {
+    image: '/images/campaign/solun/campaign-cast.webp',
+    alt: 'SOLUN campaign cast in a considered studio portrait series',
+    label: 'THE CAST',
+    title: 'Many bodies, one language',
+    text: 'A study in repetition, contrast, and the way architectural silhouettes shift across the body.'
+  },
+  {
+    image: '/images/campaign/solun/campaign-study.webp',
+    alt: 'SOLUN campaign contact sheet showing a range of sculptural swimwear silhouettes',
+    label: 'THE STUDY',
+    title: 'A season in fragments',
+    text: 'A visual archive of the campaign — gathered as a sequence of gestures, surfaces, and sunlit edges.'
   }
 ];
 
@@ -178,9 +195,8 @@ export function Home() {
                   <div className="relative aspect-[4/5] overflow-hidden bg-sand-900">
                     <img
                       src={collection.campaignImage}
-                      alt=""
+                      alt={collection.campaignAlt}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      aria-hidden="true"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-abyss-950/80 via-transparent to-transparent" />
@@ -198,6 +214,43 @@ export function Home() {
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 h-1 bg-transparent group-hover:bg-sand-500 transition-colors duration-300" />
                 </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Campaign Studies */}
+      <section className="py-20 lg:py-28 bg-pearl-100" aria-labelledby="campaign-heading">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+            <div className="max-w-2xl">
+              <p className="font-mono text-sm tracking-widest uppercase text-sand-500 mb-3">CAMPAIGN / 01</p>
+              <h2 id="campaign-heading" className="font-display text-4xl md:text-5xl font-medium text-sand-900 tracking-tight">
+                The campaign, considered
+              </h2>
+            </div>
+            <p className="text-sand-600 text-lg leading-relaxed max-w-md">
+              A visual language built from sun, water, and sculptural form — made to be read as a sequence, not a single image.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-6 items-start">
+            {CAMPAIGN_STUDIES.map((study, index) => (
+              <article key={study.label} className={`group ${index === 1 ? 'lg:mt-24' : ''}`}>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-sand-200">
+                  <img
+                    src={study.image}
+                    alt={study.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="pt-5 max-w-lg">
+                  <p className="font-mono text-xs tracking-widest uppercase text-sand-500 mb-2">{study.label}</p>
+                  <h3 className="font-display text-2xl font-medium text-sand-900 mb-2">{study.title}</h3>
+                  <p className="text-sand-600 leading-relaxed">{study.text}</p>
+                </div>
               </article>
             ))}
           </div>

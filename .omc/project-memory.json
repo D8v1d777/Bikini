@@ -1,0 +1,301 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1795551474589,
+  "projectRoot": "/home/D/Bikini",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.3.1",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.3.1",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "8.3.6",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc -b && vite build",
+      "lint": "oxlint",
+      "preview": "vite preview"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs",
+      "public",
+      "src"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 2,
+      "lastAccessed": 1795551474465,
+      "keyFiles": [
+        "CREATIVE_SPARKS.md",
+        "FABLE_WORK_METHOD.md"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 2,
+      "lastAccessed": 1795551474476,
+      "keyFiles": [
+        "favicon.svg",
+        "icons.svg"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 4,
+      "lastAccessed": 1795551474507,
+      "keyFiles": [
+        "App.css",
+        "App.tsx",
+        "index.css",
+        "main.tsx"
+      ]
+    },
+    "src/assets": {
+      "path": "src/assets",
+      "purpose": "Static assets",
+      "fileCount": 3,
+      "lastAccessed": 1795551474519,
+      "keyFiles": [
+        "hero.png",
+        "react.svg",
+        "vite.svg"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 0,
+      "lastAccessed": 1795551474536,
+      "keyFiles": []
+    },
+    "src/data": {
+      "path": "src/data",
+      "purpose": "Data files",
+      "fileCount": 1,
+      "lastAccessed": 1795551474542,
+      "keyFiles": [
+        "brand.ts"
+      ]
+    },
+    "src/pages": {
+      "path": "src/pages",
+      "purpose": "Page components",
+      "fileCount": 8,
+      "lastAccessed": 1795551474551,
+      "keyFiles": [
+        "About.tsx",
+        "Checkout.tsx",
+        "Collections.tsx"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/App.tsx",
+      "accessCount": 9.927647398568462,
+      "lastAccessed": 1795554070757,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.json",
+      "accessCount": 1,
+      "lastAccessed": 1795551520003,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.app.json",
+      "accessCount": 23.798130125168246,
+      "lastAccessed": 1795553917794,
+      "type": "file"
+    },
+    {
+      "path": "vite.config.ts",
+      "accessCount": 5.953731279414352,
+      "lastAccessed": 1795553349803,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/About.tsx",
+      "accessCount": 21.78192330483455,
+      "lastAccessed": 1795553987074,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/Checkout.tsx",
+      "accessCount": 31.63840272096813,
+      "lastAccessed": 1795554163938,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/Collections.tsx",
+      "accessCount": 29.64027887592907,
+      "lastAccessed": 1795554003637,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/Home.tsx",
+      "accessCount": 26.68906390908402,
+      "lastAccessed": 1795554014983,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/NotFound.tsx",
+      "accessCount": 1.9999619658762897,
+      "lastAccessed": 1795551640237,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/ProductDetail.tsx",
+      "accessCount": 37.494948636472934,
+      "lastAccessed": 1795554140154,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/Wishlist.tsx",
+      "accessCount": 32.63379453733728,
+      "lastAccessed": 1795554120006,
+      "type": "file"
+    },
+    {
+      "path": "src/context/CartContext.tsx",
+      "accessCount": 6.967523835242435,
+      "lastAccessed": 1795553802536,
+      "type": "file"
+    },
+    {
+      "path": "src/types/index.ts",
+      "accessCount": 1.98004813495636,
+      "lastAccessed": 1795554390198,
+      "type": "file"
+    },
+    {
+      "path": "src/main.tsx",
+      "accessCount": 1.9988133531296233,
+      "lastAccessed": 1795552529291,
+      "type": "file"
+    },
+    {
+      "path": "src/index.css",
+      "accessCount": 1,
+      "lastAccessed": 1795552595719,
+      "type": "file"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "accessCount": 1,
+      "lastAccessed": 1795552624647,
+      "type": "file"
+    },
+    {
+      "path": "src/components/layout/Header.tsx",
+      "accessCount": 7.96716269516746,
+      "lastAccessed": 1795554107079,
+      "type": "file"
+    },
+    {
+      "path": "src/components/layout/CartDrawer.tsx",
+      "accessCount": 7.9682420898628425,
+      "lastAccessed": 1795554095287,
+      "type": "file"
+    },
+    {
+      "path": "src/context/WishlistContext.tsx",
+      "accessCount": 5.983117152370307,
+      "lastAccessed": 1795553809379,
+      "type": "file"
+    },
+    {
+      "path": "src/data/brand.ts",
+      "accessCount": 5.9832400091123334,
+      "lastAccessed": 1795553815963,
+      "type": "file"
+    },
+    {
+      "path": "src/hooks/useMediaQuery.ts",
+      "accessCount": 1,
+      "lastAccessed": 1795553218808,
+      "type": "file"
+    },
+    {
+      "path": "src/utils/helpers.ts",
+      "accessCount": 1,
+      "lastAccessed": 1795553224299,
+      "type": "file"
+    },
+    {
+      "path": "tsconfig.node.json",
+      "accessCount": 1,
+      "lastAccessed": 1795553576497,
+      "type": "file"
+    },
+    {
+      "path": "FRONTEND_ERROR_DEBUG_REPORT.md",
+      "accessCount": 1,
+      "lastAccessed": 1795554344288,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1795580102201,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

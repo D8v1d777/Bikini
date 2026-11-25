@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-sand-50: #faf9f6;
+  --color-sand-100: #f4f1eb;
+  --color-sand-200: #e8e2d8;
+  --color-sand-300: #d5cbbd;
+  --color-sand-400: #b8a893;
+  --color-sand-500: #9d8b70;
+  --color-sand-600: #85735a;
+  --color-sand-700: #6d5e4a;
+  --color-sand-800: #584d3f;
+  --color-sand-900: #4a3f36;
+  --color-sand-950: #28211c;
+
+  --color-pearl-50: #fefefe;
+  --color-pearl-100: #fcfbf7;
+  --color-pearl-200: #f7f3ec;
+  --color-pearl-300: #eee8dd;
+  --color-pearl-400: #e0d8c9;
+  --color-pearl-500: #cdc3af;
+  --color-pearl-600: #afa38f;
+  --color-pearl-700: #928774;
+  --color-pearl-800: #786f60;
+  --color-pearl-900: #625b4f;
+  --color-pearl-950: #352f28;
+
+  --color-obsidian-50: #f0f0f0;
+  --color-obsidian-100: #e0e0e0;
+  --color-obsidian-200: #c4c4c4;
+  --color-obsidian-300: #a3a3a3;
+  --color-obsidian-400: #848484;
+  --color-obsidian-500: #6d6d6d;
+  --color-obsidian-600: #585858;
+  --color-obsidian-700: #4a4a4a;
+  --color-obsidian-800: #404040;
+  --color-obsidian-900: #383838;
+  --color-obsidian-950: #1e1e1e;
+
+  --color-abyss-50: #f5f5f6;
+  --color-abyss-100: #eaeaf0;
+  --color-abyss-200: #d5d5df;
+  --color-abyss-300: #b5b5c4;
+  --color-abyss-400: #8e8ea0;
+  --color-abyss-500: #6f6f85;
+  --color-abyss-600: #58586d;
+  --color-abyss-700: #484857;
+  --color-abyss-800: #3e3e4c;
+  --color-abyss-900: #353541;
+  --color-abyss-950: #1e1e26;
+
+  --color-coral-50: #fff7f5;
+  --color-coral-100: #ffeae5;
+  --color-coral-200: #ffd0c6;
+  --color-coral-300: #ffa893;
+  --color-coral-400: #ff7c60;
+  --color-coral-500: #f55a3d;
+  --color-coral-600: #e03e25;
+  --color-coral-700: #be2d1c;
+  --color-coral-800: #9a281b;
+  --color-coral-900: #7d241a;
+  --color-coral-950: #420f0a;
+
+  --color-teal-50: #f0fafa;
+  --color-teal-100: #dcf4f6;
+  --color-teal-200: #bceaf0;
+  --color-teal-300: #8fd8e5;
+  --color-teal-400: #5bbbd6;
+  --color-teal-500: #389ab8;
+  --color-teal-600: #2b7c96;
+  --color-teal-700: #266279;
+  --color-teal-800: #245063;
+  --color-teal-900: #224253;
+  --color-teal-950: #152630;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background-color: var(--color-pearl-50);
+  color: var(--color-abyss-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}

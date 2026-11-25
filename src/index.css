@@ -97,6 +97,30 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.solun-hero-media {
+  z-index: 1;
+  filter: saturate(0.88) contrast(1.04);
+}
+
+.solun-hero-poster {
+  z-index: 0;
+  filter: saturate(0.88) contrast(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .solun-hero-media {
+    display: none;
+  }
+
+  .solun-hero-poster {
+    display: block;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

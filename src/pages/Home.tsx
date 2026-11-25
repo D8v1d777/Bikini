@@ -35,15 +35,15 @@ const HERO_SLIDES = [
 
 const CAMPAIGN_STUDIES = [
   {
-    image: '/images/campaign/solun/campaign-cast.webp',
+    image: '/images/campaign/solun/campaign-cast.jpg',
     alt: 'SOLUN campaign cast in a considered studio portrait series',
     label: 'THE CAST',
     title: 'Many bodies, one language',
     text: 'A study in repetition, contrast, and the way architectural silhouettes shift across the body.'
   },
   {
-    image: '/images/campaign/solun/campaign-study.webp',
-    alt: 'SOLUN campaign contact sheet showing a range of sculptural swimwear silhouettes',
+    image: '/images/products/strata-one/terracotta-hero.jpg',
+    alt: 'SOLUN Strata silhouette in layered terracotta swimwear against sedimentary stone',
     label: 'THE STUDY',
     title: 'A season in fragments',
     text: 'A visual archive of the campaign — gathered as a sequence of gestures, surfaces, and sunlit edges.'
@@ -58,16 +58,21 @@ export function Home() {
       {/* Hero Carousel */}
       <section className="relative h-screen min-h-[700px] flex items-center" aria-label="Hero carousel">
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+          <img
+            className="solun-hero-poster absolute inset-0 w-full h-full object-cover"
+            src="/images/campaign/solun/hero-pool-closeup.jpg"
+            alt=""
+          />
           <video
-            className="absolute inset-0 w-full h-full object-cover"
+            className="solun-hero-media absolute inset-0 w-full h-full object-cover"
             autoPlay
             loop
             muted
             playsInline
-            poster={HERO_SLIDES[0].image}
+            poster="/images/campaign/solun/hero-pool-closeup.jpg"
             aria-label="SOLUN cinematic campaign film"
           >
-            <source src="/images/campaign/solun/solun-campaign-film.mp4" type="video/mp4" />
+            <source src="/images/campaign/solun/solun-background-film.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-abyss-950/60 via-transparent to-transparent" />
         </div>

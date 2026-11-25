@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, ScrollRestoration } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext.tsx';
 import { WishlistProvider } from './context/WishlistContext.tsx';
 import { Header } from './components/layout/Header.tsx';
@@ -18,7 +18,6 @@ function App() {
     <CartProvider>
       <WishlistProvider>
         <BrowserRouter>
-          <ScrollRestoration />
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1 pt-20">

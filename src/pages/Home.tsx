@@ -58,23 +58,18 @@ export function Home() {
       {/* Hero Carousel */}
       <section className="relative h-screen min-h-[700px] flex items-center" aria-label="Hero carousel">
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-          {HERO_SLIDES.map((slide, index) => (
-            <div
-              key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === 0 ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{ zIndex: 3 - index }}
-            >
-              <img
-                src={slide.image}
-                alt=""
-                className="w-full h-full object-cover"
-                aria-hidden="true"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-abyss-950/60 via-transparent to-transparent" />
-            </div>
-          ))}
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={HERO_SLIDES[0].image}
+            aria-label="SOLUN cinematic campaign film"
+          >
+            <source src="/images/campaign/solun/solun-campaign-film.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-abyss-950/60 via-transparent to-transparent" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-20 w-full z-10">

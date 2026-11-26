@@ -1,5 +1,7 @@
 import type { Product, Collection, ColorVariant, SizeVariant, ProductImage } from '../types/index.ts';
 
+const CAMPAIGN_ASSETS = { obsidian: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/679cebb0-c605-483f-9e4d-24cd34103bf2/56bb253e-767a-42a6-9992-446c8c40bcde/Original_fictional_adult_Asian_woman_fashion_model__visibly_.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjZiZmQ3YTUyYzhkZmNhZiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTg1NzE4OX0.wfCUUCIh4OnonYApF2Ui9dMJ7xmLWOWwdwklvTLHvU', terracotta: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/e5331835-7149-491a-b29d-d3ccf901af4b/f5a2c0fa-da4d-4daf-bb90-edcddcce7ca5/Original_fictional_adult_Latina_woman_fashion_model__visibly.png?_jwt=eyJrZXlIYXNoIjoiNTc3YjY1NzhhOWMzYmMxNiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTgxMTg5Nn0.nuotvBDdnNZxF_qnjlotznq8EJI4wRmMjfR2XfuAYaU', pearl: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/0c32bd35-78de-41ee-b6e9-9dcfbf2ebd79/3666f0a9-4097-4a98-9f0f-5f945438b583/Original_fictional_adult_Black_American_woman_fashion_model_.png?_jwt=eyJrZXlIYXNoIjoiMGNhYTY5Nzc1MTliM2YzNiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTc3NDcxMX0.fIYh3zrtGtHzYVHYKpB1sjNRzfUnMCIWAxO1KScDWYU', cast: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/9e49a7b5-7f34-42f6-a4df-62207e64e668/74ecbeb9-50ca-4054-a7a5-3ae173779917/Original_fictional_fashion_campaign_cast_of_four_visibly_adu.png?_jwt=eyJrZXlIYXNoIjoiMTY3MjA1ZWVmNmQ3YWEwZiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTc3Nzc3NH0.6eqyF08WNrkCdptx916jchn-yd3vKFhg6CFeuIEOyeY' } as const;
+
 export const BRAND_NAME = 'SOLUN';
 export const BRAND_TAGLINE = 'Architectural Swimwear';
 export const BRAND_DESCRIPTION = 'Sculptural forms. Regenerative fabrics. The modern silhouette redefined.';
@@ -9,7 +11,7 @@ export const COLLECTIONS: Collection[] = [
     id: 'monolith',
     name: 'MONOLITH',
     description: 'Carved from shadow. The inaugural collection explores monolithic form — single-piece architecture, hardware-free closures, and a palette drawn from volcanic mineral.',
-    campaignImage: '/images/campaign/solun/monolith-editorial.webp',
+    campaignImage: CAMPAIGN_ASSETS.obsidian,
     campaignAlt: 'Monolith collection campaign — model in volcanic sand bikini against basalt formations',
     products: ['monolith-one', 'monolith-two', 'monolith-three'],
     color: '#4a3f36'
@@ -18,7 +20,7 @@ export const COLLECTIONS: Collection[] = [
     id: 'lumen',
     name: 'LUMEN',
     description: 'Light as structure. Translucent layers, refractive edges, and a colour story of dawn on water. Fabric that catches and releases light with every movement.',
-    campaignImage: '/images/campaign/solun/lumen-coastal-blue.webp',
+    campaignImage: CAMPAIGN_ASSETS.pearl,
     campaignAlt: 'Lumen collection campaign — model in pearlescent bikini at water\'s edge, morning light',
     products: ['lumen-one', 'lumen-two', 'lumen-three'],
     color: '#e8e2d8'
@@ -27,7 +29,7 @@ export const COLLECTIONS: Collection[] = [
     id: 'strata',
     name: 'STRATA',
     description: 'Sedimentary logic. Layered construction, tonal depth, and hardware inspired by geological folding. The most technical collection — built for motion, shaped by time.',
-    campaignImage: '/images/campaign/solun/strata-pool-editorial.webp',
+    campaignImage: CAMPAIGN_ASSETS.terracotta,
     campaignAlt: 'Strata collection campaign — model in layered terracotta bikini against sedimentary cliffs',
     products: ['strata-one', 'strata-two', 'strata-three'],
     color: '#85735a'
@@ -43,19 +45,19 @@ const SIZES: SizeVariant[] = [
 ];
 
 const MONOLITH_COLORS: ColorVariant[] = [
-  { id: 'obsidian', name: 'Obsidian', hex: '#1e1e1e', images: ['/images/products/monolith-one/obsidian-hero.jpg', '/images/products/monolith-one/obsidian-back.jpg', '/images/products/monolith-one/obsidian-detail.jpg'], inStock: true },
+  { id: 'obsidian', name: 'Obsidian', hex: '#1e1e1e', images: [CAMPAIGN_ASSETS.obsidian, '/images/products/monolith-one/obsidian-back.jpg', '/images/products/monolith-one/obsidian-detail.jpg'], inStock: true },
   { id: 'basalt', name: 'Basalt', hex: '#383838', images: ['/images/products/monolith-one/basalt-hero.jpg', '/images/products/monolith-one/basalt-back.jpg', '/images/products/monolith-one/basalt-detail.jpg'], inStock: true },
   { id: 'ash', name: 'Volcanic Ash', hex: '#585858', images: ['/images/products/monolith-one/ash-hero.jpg', '/images/products/monolith-one/ash-back.jpg', '/images/products/monolith-one/ash-detail.jpg'], inStock: true },
 ];
 
 const LUMEN_COLORS: ColorVariant[] = [
-  { id: 'pearl', name: 'Pearl', hex: '#fcfbf7', images: ['/images/products/lumen-one/pearl-hero.jpg', '/images/products/lumen-one/pearl-back.jpg', '/images/products/lumen-one/pearl-detail.jpg'], inStock: true },
+  { id: 'pearl', name: 'Pearl', hex: '#fcfbf7', images: [CAMPAIGN_ASSETS.pearl, '/images/products/lumen-one/pearl-back.jpg', '/images/products/lumen-one/pearl-detail.jpg'], inStock: true },
   { id: 'mist', name: 'Morning Mist', hex: '#eee8dd', images: ['/images/products/lumen-one/mist-hero.jpg', '/images/products/lumen-one/mist-back.jpg', '/images/products/lumen-one/mist-detail.jpg'], inStock: true },
   { id: 'frost', name: 'Sea Frost', hex: '#e0d8c9', images: ['/images/products/lumen-one/frost-hero.jpg', '/images/products/lumen-one/frost-back.jpg', '/images/products/lumen-one/frost-detail.jpg'], inStock: false },
 ];
 
 const STRATA_COLORS: ColorVariant[] = [
-  { id: 'terracotta', name: 'Terracotta', hex: '#9a281b', images: ['/images/products/strata-one/terracotta-hero.jpg', '/images/products/strata-one/terracotta-back.jpg', '/images/products/strata-one/terracotta-detail.jpg'], inStock: true },
+  { id: 'terracotta', name: 'Terracotta', hex: '#9a281b', images: [CAMPAIGN_ASSETS.terracotta, '/images/products/strata-one/terracotta-back.jpg', '/images/products/strata-one/terracotta-detail.jpg'], inStock: true },
   { id: 'ochre', name: 'Raw Ochre', hex: '#be2d1c', images: ['/images/products/strata-one/ochre-hero.jpg', '/images/products/strata-one/ochre-back.jpg', '/images/products/strata-one/ochre-detail.jpg'], inStock: true },
   { id: 'sienna', name: 'Burnt Sienna', hex: '#7d241a', images: ['/images/products/strata-one/sienna-hero.jpg', '/images/products/strata-one/sienna-back.jpg', '/images/products/strata-one/sienna-detail.jpg'], inStock: true },
 ];

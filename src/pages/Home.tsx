@@ -65,17 +65,7 @@ export function Home() {
             src="https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/679cebb0-c605-483f-9e4d-24cd34103bf2/56bb253e-767a-42a6-9992-446c8c40bcde/Original_fictional_adult_Asian_woman_fashion_model__visibly_.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjZiZmQ3YTUyYzhkZmNhZiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTg1NzE4OX0.wfCUUCIh4OnonYApF2Ui9dMJ7xmLWOWwdwklvTLHvU"
             alt=""
           />
-          <video
-            className="solun-hero-media absolute inset-0 w-full h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster="https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/679cebb0-c605-483f-9e4d-24cd34103bf2/56bb253e-767a-42a6-9992-446c8c40bcde/Original_fictional_adult_Asian_woman_fashion_model__visibly_.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjZiZmQ3YTUyYzhkZmNhZiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTg1NzE4OX0.wfCUUCIh4OnonYApF2Ui9dMJ7xmLWOWwdwklvTLHvU"
-            aria-label="SOLUN cinematic campaign film"
-          >
-            <source src="/images/campaign/solun/solun-background-film.mp4" type="video/mp4" />
-          </video>
+          {/* The generated still is the intentional hero surface for a lightweight Render landing page. */}
           <div className="absolute inset-0 bg-gradient-to-r from-abyss-950/60 via-transparent to-transparent" />
         </div>
 

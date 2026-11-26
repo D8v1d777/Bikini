@@ -3,6 +3,8 @@ import { Button } from '../components/ui/Button.tsx';
 import { COLLECTIONS, getFeaturedProducts, BRAND_NAME, BRAND_TAGLINE } from '../data/brand.ts';
 import type { Collection, Product } from '../types/index.ts';
 
+const CAMPAIGN_CAST_IMAGE = 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/9e49a7b5-7f34-42f6-a4df-62207e64e668/74ecbeb9-50ca-4054-a7a5-3ae173779917/Original_fictional_fashion_campaign_cast_of_four_visibly_adu.png?_jwt=eyJrZXlIYXNoIjoiMTY3MjA1ZWVmNmQ3YWEwZiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTc3Nzc3NH0.6eqyF08WNrkCdptx916jchn-yd3vKFhg6CFeuIEOyeY';
+
 const HERO_SLIDES = [
   {
     id: 'slide-1',
@@ -35,14 +37,14 @@ const HERO_SLIDES = [
 
 const CAMPAIGN_STUDIES = [
   {
-    image: '/images/campaign/solun/campaign-cast.jpg',
+    image: CAMPAIGN_CAST_IMAGE,
     alt: 'SOLUN campaign cast in a considered studio portrait series',
     label: 'THE CAST',
     title: 'Many bodies, one language',
     text: 'A study in repetition, contrast, and the way architectural silhouettes shift across the body.'
   },
   {
-    image: '/images/products/strata-one/terracotta-hero.jpg',
+    image: 'https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/e5331835-7149-491a-b29d-d3ccf901af4b/f5a2c0fa-da4d-4daf-bb90-edcddcce7ca5/Original_fictional_adult_Latina_woman_fashion_model__visibly.png?_jwt=eyJrZXlIYXNoIjoiNTc3YjY1NzhhOWMzYmMxNiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTgxMTg5Nn0.nuotvBDdnNZxF_qnjlotznq8EJI4wRmMjfR2XfuAYaU',
     alt: 'SOLUN Strata silhouette in layered terracotta swimwear against sedimentary stone',
     label: 'THE STUDY',
     title: 'A season in fragments',
@@ -60,7 +62,7 @@ export function Home() {
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <img
             className="solun-hero-poster absolute inset-0 w-full h-full object-cover"
-            src="/images/campaign/solun/hero-pool-closeup.jpg"
+            src="https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/679cebb0-c605-483f-9e4d-24cd34103bf2/56bb253e-767a-42a6-9992-446c8c40bcde/Original_fictional_adult_Asian_woman_fashion_model__visibly_.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjZiZmQ3YTUyYzhkZmNhZiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTg1NzE4OX0.wfCUUCIh4OnonYApF2Ui9dMJ7xmLWOWwdwklvTLHvU"
             alt=""
           />
           <video
@@ -69,7 +71,7 @@ export function Home() {
             loop
             muted
             playsInline
-            poster="/images/campaign/solun/hero-pool-closeup.jpg"
+            poster="https://dnznrvs05pmza.cloudfront.net/gemini/gemini-3-pro-image/images/679cebb0-c605-483f-9e4d-24cd34103bf2/56bb253e-767a-42a6-9992-446c8c40bcde/Original_fictional_adult_Asian_woman_fashion_model__visibly_.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjZiZmQ3YTUyYzhkZmNhZiIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5NTg1NzE4OX0.wfCUUCIh4OnonYApF2Ui9dMJ7xmLWOWwdwklvTLHvU"
             aria-label="SOLUN cinematic campaign film"
           >
             <source src="/images/campaign/solun/solun-background-film.mp4" type="video/mp4" />

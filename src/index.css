@@ -1,10 +1,28 @@
 @import "tailwindcss";
+@import "./styles/tokens.css";
 
 @theme {
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-display: "Playfair Display", serif;
   --font-mono: "JetBrains Mono", monospace;
 
+  /* Map CSS variables to Tailwind colors for collection-aware theming */
+  --color-collection-bg: var(--collection-bg);
+  --color-collection-surface: var(--collection-surface);
+  --color-collection-surface-elevated: var(--collection-surface-elevated);
+  --color-collection-border: var(--collection-border);
+  --color-collection-text-primary: var(--collection-text-primary);
+  --color-collection-text-secondary: var(--collection-text-secondary);
+  --color-collection-text-muted: var(--collection-text-muted);
+  --color-collection-accent: var(--collection-accent);
+  --color-collection-accent-hover: var(--collection-accent-hover);
+  --color-collection-accent-subtle: var(--collection-accent-subtle);
+  --color-collection-glow: var(--collection-glow);
+  --color-collection-shadow: var(--collection-shadow);
+  --color-collection-overlay: var(--collection-overlay);
+  --color-focus: var(--focus-color);
+
+  /* Global neutral palette (available everywhere) */
   --color-sand-50: #faf9f6;
   --color-sand-100: #f4f1eb;
   --color-sand-200: #e8e2d8;
@@ -86,12 +104,18 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-sans);
-  background-color: var(--color-pearl-50);
-  color: var(--color-abyss-900);
+  background-color: var(--collection-bg);
+  color: var(--collection-text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -108,10 +132,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   .solun-hero-media {
     display: none;
   }
@@ -132,5 +152,99 @@ body {
 
   .font-mono {
     font-family: var(--font-mono);
+  }
+
+  /* Collection-aware utilities */
+  .bg-collection-bg {
+    background-color: var(--collection-bg);
+  }
+
+  .bg-collection-surface {
+    background-color: var(--collection-surface);
+  }
+
+  .bg-collection-surface-elevated {
+    background-color: var(--collection-surface-elevated);
+  }
+
+  .bg-collection-accent {
+    background-color: var(--collection-accent);
+  }
+
+  .bg-collection-accent-hover {
+    background-color: var(--collection-accent-hover);
+  }
+
+  .bg-collection-accent-subtle {
+    background-color: var(--collection-accent-subtle);
+  }
+
+  .text-collection-primary {
+    color: var(--collection-text-primary);
+  }
+
+  .text-collection-secondary {
+    color: var(--collection-text-secondary);
+  }
+
+  .text-collection-muted {
+    color: var(--collection-text-muted);
+  }
+
+  .text-collection-surface {
+    color: var(--collection-surface);
+  }
+
+  .text-collection-accent {
+    color: var(--collection-accent);
+  }
+
+  .border-collection-border {
+    border-color: var(--collection-border);
+  }
+
+  .ring-collection-accent {
+    --tw-ring-color: var(--collection-accent);
+  }
+
+  .ring-collection-border {
+    --tw-ring-color: var(--collection-border);
+  }
+
+  .ring-collection-surface {
+    --tw-ring-color: var(--collection-surface);
+  }
+
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .transition-collection {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+  .image-loading {
+    background: linear-gradient(
+      90deg,
+      var(--collection-surface) 25%,
+      var(--collection-border) 50%,
+      var(--collection-surface) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .image-loading {
+      animation: none;
+      background: var(--collection-surface);
+    }
   }
 }

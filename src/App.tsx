@@ -12,8 +12,12 @@ import { About } from './pages/About.tsx';
 import { Journal } from './pages/Journal.tsx';
 import { Wishlist } from './pages/Wishlist.tsx';
 import { NotFound } from './pages/NotFound.tsx';
+import { useCollectionTheme } from './hooks/useCollectionTheme.ts';
 
 function App() {
+  // Activate collection-aware theming on route changes
+  useCollectionTheme();
+
   return (
     <CartProvider>
       <WishlistProvider>

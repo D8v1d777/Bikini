@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Button } from '../ui/Button.tsx';
 
 const FOOTER_LINKS = {
   CUSTOMER: [
@@ -48,14 +49,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-sand-950 text-pearl-100" role="contentinfo">
+    <footer className="bg-collection-surface-elevated text-collection-text-primary" role="contentinfo">
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="col-span-2 lg:col-span-1">
             <Link to="/" className="font-display text-3xl font-medium tracking-tight mb-6 block">
               SOLUN
             </Link>
-            <p className="text-sand-400 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-collection-text-muted text-sm leading-relaxed mb-6 max-w-xs">
               Sculptural forms. Regenerative fabrics. The modern silhouette redefined.
             </p>
             <div className="flex gap-4">
@@ -65,7 +66,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sand-400 hover:text-pearl-100 transition-colors"
+                  className="text-collection-text-muted hover:text-collection-text-primary transition-colors"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -75,11 +76,11 @@ export function Footer() {
           </div>
 
           <nav aria-label="Customer service">
-            <h3 className="font-medium text-pearl-100 uppercase tracking-wider text-sm mb-4">CUSTOMER</h3>
+            <h3 className="font-medium text-collection-text-primary uppercase tracking-wider text-sm mb-4">CUSTOMER</h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.CUSTOMER.map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-sand-400 hover:text-pearl-100 transition-colors text-sm">
+                  <Link to={link.href} className="text-collection-text-muted hover:text-collection-text-primary transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -88,11 +89,11 @@ export function Footer() {
           </nav>
 
           <nav aria-label="Brand">
-            <h3 className="font-medium text-pearl-100 uppercase tracking-wider text-sm mb-4">BRAND</h3>
+            <h3 className="font-medium text-collection-text-primary uppercase tracking-wider text-sm mb-4">BRAND</h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.BRAND.map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-sand-400 hover:text-pearl-100 transition-colors text-sm">
+                  <Link to={link.href} className="text-collection-text-muted hover:text-collection-text-primary transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -101,11 +102,11 @@ export function Footer() {
           </nav>
 
           <nav aria-label="Legal">
-            <h3 className="font-medium text-pearl-100 uppercase tracking-wider text-sm mb-4">LEGAL</h3>
+            <h3 className="font-medium text-collection-text-primary uppercase tracking-wider text-sm mb-4">LEGAL</h3>
             <ul className="space-y-3">
               {FOOTER_LINKS.LEGAL.map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-sand-400 hover:text-pearl-100 transition-colors text-sm">
+                  <Link to={link.href} className="text-collection-text-muted hover:text-collection-text-primary transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -114,32 +115,29 @@ export function Footer() {
           </nav>
 
           <div>
-            <h3 className="font-medium text-pearl-100 uppercase tracking-wider text-sm mb-4">NEWSLETTER</h3>
-            <p className="text-sand-400 text-sm mb-4 leading-relaxed">
+            <h3 className="font-medium text-collection-text-primary uppercase tracking-wider text-sm mb-4">NEWSLETTER</h3>
+            <p className="text-collection-text-muted text-sm mb-4 leading-relaxed">
               New collections, journal entries, and private previews.
             </p>
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Email address"
-                className="flex-1 px-4 py-3 bg-sand-900 border border-sand-800 text-pearl-100 placeholder:text-sand-500 rounded-md focus:outline-none focus:border-sand-500 focus:ring-1 focus:ring-sand-500 text-sm"
+                className="flex-1 px-4 py-3 bg-collection-bg border border-collection-border text-collection-text-primary placeholder:text-collection-text-muted rounded-md focus:outline-none focus:border-collection-accent focus:ring-1 focus:ring-collection-accent text-sm"
                 aria-label="Email address for newsletter"
               />
-              <button
-                type="submit"
-                className="px-4 py-3 bg-sand-500 text-sand-950 font-medium text-sm rounded-md hover:bg-sand-400 transition-colors"
-              >
+              <Button type="submit" size="sm" variant="primary">
                 Subscribe
-              </button>
+              </Button>
             </form>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-sand-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sand-500 text-sm">
+        <div className="mt-12 pt-8 border-t border-collection-border flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-collection-text-muted text-sm">
             © {currentYear} SOLUN. All rights reserved.
           </p>
-          <p className="text-sand-500 text-sm font-mono">
+          <p className="text-collection-text-muted text-sm font-mono">
             Simulated commerce experience — no real transactions
           </p>
         </div>

@@ -26,7 +26,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-pearl-50/95 backdrop-blur-md border-b border-sand-200' : 'bg-transparent'
+        scrolled ? 'bg-collection-surface/95 backdrop-blur-md border-b border-collection-border' : 'bg-transparent'
       }`}
       role="banner"
     >
@@ -34,7 +34,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           <Link
             to="/"
-            className="font-display text-2xl font-medium text-sand-900 tracking-tight hover:opacity-80 transition-opacity"
+            className="font-display text-2xl font-medium text-collection-text-primary tracking-tight hover:opacity-80 transition-opacity"
             aria-label="SOLUN - Home"
           >
             SOLUN
@@ -47,8 +47,8 @@ export function Header() {
                 to={item.path}
                 className={`text-sm font-medium tracking-wider uppercase transition-colors ${
                   location.pathname === item.path
-                    ? 'text-sand-900'
-                    : 'text-sand-600 hover:text-sand-900'
+                    ? 'text-collection-text-primary'
+                    : 'text-collection-text-secondary hover:text-collection-text-primary'
                 }`}
               >
                 {item.label}
@@ -59,7 +59,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="relative p-2 text-sand-600 hover:text-sand-900 transition-colors md:hidden"
+              className="relative p-2 text-collection-text-secondary hover:text-collection-text-primary transition-colors md:hidden"
               aria-label="Open menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -74,14 +74,14 @@ export function Header() {
 
             <Link
               to="/wishlist"
-              className="relative p-2 text-sand-600 hover:text-sand-900 transition-colors"
+              className="relative p-2 text-collection-text-secondary hover:text-collection-text-primary transition-colors"
               aria-label={`Wishlist, ${wishlistItems.length} items`}
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
               </svg>
               {wishlistItems.length > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-coral-500 text-pearl-50 text-xs font-medium rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-collection-accent text-collection-surface text-xs font-medium rounded-full flex items-center justify-center">
                   {wishlistItems.length > 9 ? '9+' : wishlistItems.length}
                 </span>
               )}
@@ -89,7 +89,7 @@ export function Header() {
 
             <button
               onClick={toggleCart}
-              className="relative p-2 text-sand-600 hover:text-sand-900 transition-colors"
+              className="relative p-2 text-collection-text-secondary hover:text-collection-text-primary transition-colors"
               aria-label={`Shopping bag, ${totalItems} items`}
               aria-expanded={cartState.isOpen}
             >
@@ -99,7 +99,7 @@ export function Header() {
                 <path d="M16 10a4 4 0 0 1 0 8" />
               </svg>
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-sand-900 text-pearl-50 text-xs font-medium rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-collection-text-primary text-collection-surface text-xs font-medium rounded-full flex items-center justify-center">
                   {totalItems > 9 ? '9+' : totalItems}
                 </span>
               )}
@@ -108,14 +108,14 @@ export function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden mt-6 pt-6 border-t border-sand-200 animate-slide-down">
+          <div className="md:hidden mt-6 pt-6 border-t border-collection-border animate-slide-down">
             <div className="flex flex-col gap-4">
               {NAV_ITEMS.map(item => (
                 <Link
                   key={item.path}
                   to={item.path}
                   className={`text-base font-medium tracking-wider uppercase py-2 ${
-                    location.pathname === item.path ? 'text-sand-900' : 'text-sand-600'
+                    location.pathname === item.path ? 'text-collection-text-primary' : 'text-collection-text-secondary'
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >

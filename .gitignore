@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# OMC operational state (session replays, checkpoints, agent memory)
+.omc/state/
+.omc/project-memory.json.rollback.*

@@ -9,13 +9,13 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className = '', variant = 'primary', size = 'md', loading = false, fullWidth = false, disabled, children, ...props }, ref) => {
-    const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-pearl-50 disabled:opacity-50 disabled:cursor-not-allowed';
+    const baseStyles = 'inline-flex items-center justify-center font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
     const variants = {
-      primary: 'bg-sand-900 text-pearl-50 hover:bg-sand-950 active:bg-sand-800',
-      secondary: 'bg-sand-200 text-sand-900 hover:bg-sand-300 active:bg-sand-400',
-      ghost: 'bg-transparent text-sand-900 hover:bg-sand-100 active:bg-sand-200',
-      outline: 'border border-sand-300 bg-transparent text-sand-900 hover:bg-sand-50 active:bg-sand-100'
+      primary: 'bg-collection-accent text-collection-surface hover:bg-collection-accent-hover active:bg-collection-accent focus-visible:ring-collection-accent focus-visible:ring-offset-collection-surface',
+      secondary: 'bg-collection-surface-elevated text-collection-text-primary hover:bg-collection-border active:bg-collection-border focus-visible:ring-collection-border focus-visible:ring-offset-collection-surface',
+      ghost: 'bg-transparent text-collection-text-primary hover:bg-collection-accent-subtle active:bg-collection-accent-subtle focus-visible:ring-collection-accent focus-visible:ring-offset-collection-surface',
+      outline: 'border border-collection-border bg-transparent text-collection-text-primary hover:bg-collection-accent-subtle active:bg-collection-accent-subtle focus-visible:ring-collection-border focus-visible:ring-offset-collection-surface'
     };
 
     const sizes = {

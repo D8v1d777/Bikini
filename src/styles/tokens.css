@@ -1,0 +1,356 @@
+@layer base {
+  :root {
+    /* ==========================================================================
+       GEOLOGICAL COLOR PALETTES — Collection-Specific Atmospheres
+       ========================================================================== */
+
+    /* MONOLITH — Volcanic darkness, obsidian, basalt, sculptural forms */
+    --monolith-bg: #0d0c0b;
+    --monolith-surface: #1a1816;
+    --monolith-surface-elevated: #24211e;
+    --monolith-border: #2f2b27;
+    --monolith-text-primary: #f4f1eb;
+    --monolith-text-secondary: #b8a893;
+    --monolith-text-muted: #85735a;
+    --monolith-accent: #be2d1c;
+    --monolith-accent-hover: #9a281b;
+    --monolith-accent-subtle: #3d1f1a;
+    --monolith-glow: rgba(190, 45, 28, 0.15);
+    --monolith-shadow: rgba(13, 12, 11, 0.6);
+    --monolith-overlay: rgba(13, 12, 11, 0.7);
+
+    /* LUMEN — Translucence, refraction, pearlescence, morning light */
+    --lumen-bg: #fcfbf7;
+    --lumen-surface: #fefefe;
+    --lumen-surface-elevated: #ffffff;
+    --lumen-border: #eee8dd;
+    --lumen-text-primary: #1e1e1e;
+    --lumen-text-secondary: #585858;
+    --lumen-text-muted: #848484;
+    --lumen-accent: #c4b08a;
+    --lumen-accent-hover: #b09a6e;
+    --lumen-accent-subtle: #f0ebe0;
+    --lumen-glow: rgba(196, 176, 138, 0.2);
+    --lumen-shadow: rgba(30, 30, 30, 0.06);
+    --lumen-overlay: rgba(252, 251, 247, 0.8);
+
+    /* STRATA — Sedimentary time, terracotta, ochre, layered formations */
+    --strata-bg: #1a1411;
+    --strata-surface: #28201c;
+    --strata-surface-elevated: #342a24;
+    --strata-border: #4a3d33;
+    --strata-text-primary: #f4f1eb;
+    --strata-text-secondary: #d5cbbd;
+    --strata-text-muted: #b8a893;
+    --strata-accent: #be2d1c;
+    --strata-accent-hover: #d45a3d;
+    --strata-accent-subtle: #3d1f1a;
+    --strata-glow: rgba(190, 45, 28, 0.12);
+    --strata-shadow: rgba(26, 20, 17, 0.7);
+    --strata-overlay: rgba(26, 20, 17, 0.75);
+
+    /* SOLUN GLOBAL NEUTRALS — Cross-collection foundation */
+    --solun-sand-50: #faf9f6;
+    --solun-sand-100: #f4f1eb;
+    --solun-sand-200: #e8e2d8;
+    --solun-sand-300: #d5cbbd;
+    --solun-sand-400: #b8a893;
+    --solun-sand-500: #9d8b70;
+    --solun-sand-600: #85735a;
+    --solun-sand-700: #6d5e4a;
+    --solun-sand-800: #584d3f;
+    --solun-sand-900: #4a3f36;
+    --solun-sand-950: #28211c;
+
+    --solun-pearl-50: #fefefe;
+    --solun-pearl-100: #fcfbf7;
+    --solun-pearl-200: #f7f3ec;
+    --solun-pearl-300: #eee8dd;
+    --solun-pearl-400: #e0d8c9;
+    --solun-pearl-500: #cdc3af;
+    --solun-pearl-600: #afa38f;
+    --solun-pearl-700: #928774;
+    --solun-pearl-800: #786f60;
+    --solun-pearl-900: #625b4f;
+    --solun-pearl-950: #352f28;
+
+    --solun-obsidian-50: #f0f0f0;
+    --solun-obsidian-100: #e0e0e0;
+    --solun-obsidian-200: #c4c4c4;
+    --solun-obsidian-300: #a3a3a3;
+    --solun-obsidian-400: #848484;
+    --solun-obsidian-500: #6d6d6d;
+    --solun-obsidian-600: #585858;
+    --solun-obsidian-700: #4a4a4a;
+    --solun-obsidian-800: #404040;
+    --solun-obsidian-900: #383838;
+    --solun-obsidian-950: #1e1e1e;
+
+    --solun-coral-50: #fff7f5;
+    --solun-coral-100: #ffeae5;
+    --solun-coral-200: #ffd0c6;
+    --solun-coral-300: #ffa893;
+    --solun-coral-400: #ff7c60;
+    --solun-coral-500: #f55a3d;
+    --solun-coral-600: #e03e25;
+    --solun-coral-700: #be2d1c;
+    --solun-coral-800: #9a281b;
+    --solun-coral-900: #7d241a;
+    --solun-coral-950: #420f0a;
+
+    --solun-teal-50: #f0fafa;
+    --solun-teal-100: #dcf4f6;
+    --solun-teal-200: #bceaf0;
+    --solun-teal-300: #8fd8e5;
+    --solun-teal-400: #5bbbd6;
+    --solun-teal-500: #389ab8;
+    --solun-teal-600: #2b7c96;
+    --solun-teal-700: #266279;
+    --solun-teal-800: #245063;
+    --solun-teal-900: #224253;
+    --solun-teal-950: #152630;
+
+    /* ==========================================================================
+       TYPOGRAPHIC SCALE — Editorial Authority
+       ========================================================================== */
+
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-sans: "DM Sans", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", Menlo, monospace;
+
+    /* Display scale — dramatic, tight leading, editorial tracking */
+    --text-display-hero: clamp(3.5rem, 8vw, 7.5rem);
+    --text-display-xl: clamp(2.5rem, 5vw, 4.5rem);
+    --text-display-lg: clamp(2rem, 4vw, 3.5rem);
+    --text-display-md: clamp(1.75rem, 3vw, 2.5rem);
+    --text-display-sm: clamp(1.5rem, 2.5vw, 2rem);
+
+    --leading-display-tight: 1.02;
+    --leading-display-snug: 1.08;
+    --leading-display-normal: 1.15;
+
+    --tracking-display-tight: -0.03em;
+    --tracking-display-normal: -0.015em;
+    --tracking-display-wide: 0.02em;
+
+    /* Body scale — refined, generous leading */
+    --text-body-lg: 1.125rem;   /* 18px */
+    --text-body: 0.9375rem;     /* 15px */
+    --text-body-sm: 0.875rem;   /* 14px */
+    --text-caption: 0.8125rem;  /* 13px */
+    --text-micro: 0.75rem;      /* 12px */
+
+    --leading-body-relaxed: 1.75;
+    --leading-body-normal: 1.65;
+    --leading-body-snug: 1.5;
+
+    /* UI scale — precise, technical */
+    --text-ui-lg: 0.875rem;
+    --text-ui: 0.8125rem;
+    --text-ui-sm: 0.75rem;
+
+    /* ==========================================================================
+       SPACING RHYTHM — 4px base, golden ratio progression
+       ========================================================================== */
+
+    --space-0: 0;
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-7: 1.75rem;   /* 28px */
+    --space-8: 2rem;      /* 32px */
+    --space-10: 2.5rem;   /* 40px */
+    --space-12: 3rem;     /* 48px */
+    --space-14: 3.5rem;   /* 56px */
+    --space-16: 4rem;     /* 64px */
+    --space-20: 5rem;     /* 80px */
+    --space-24: 6rem;     /* 96px */
+    --space-28: 7rem;     /* 112px */
+    --space-32: 8rem;     /* 128px */
+
+    /* Section spacing */
+    --space-section-sm: var(--space-16);
+    --space-space-section-md: var(--space-20);
+    --space-section-lg: var(--space-28);
+    --space-section-xl: var(--space-32);
+
+    /* Container */
+    --container-max: 80rem;     /* 1280px */
+    --container-wide: 90rem;    /* 1440px */
+    --container-full: 100%;
+    --container-padding: var(--space-6);
+    --container-padding-lg: var(--space-8);
+
+    /* ==========================================================================
+       BORDER RADIUS — Restrained, architectural
+       ========================================================================== */
+
+    --radius-none: 0;
+    --radius-xs: 0.125rem;    /* 2px */
+    --radius-sm: 0.25rem;     /* 4px */
+    --radius-md: 0.375rem;    /* 6px */
+    --radius-lg: 0.5rem;      /* 8px */
+    --radius-xl: 0.75rem;     /* 12px */
+    --radius-2xl: 1rem;       /* 16px */
+    --radius-full: 9999px;
+
+    /* ==========================================================================
+       SHADOW SYSTEM — Geological depth, not generic elevation
+       ========================================================================== */
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.12);
+    --shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.15);
+
+    /* Collection-specific shadows */
+    --shadow-monolith: 0 8px 32px var(--monolith-shadow);
+    --shadow-lumen: 0 4px 20px var(--lumen-shadow);
+    --shadow-strata: 0 8px 32px var(--strata-shadow);
+
+    /* Focus rings */
+    --focus-ring: 0 0 0 2px var(--focus-color);
+    --focus-ring-offset: 0 0 0 4px var(--focus-color);
+
+    /* ==========================================================================
+       MOTION TOKENS — Purposeful choreography
+       ========================================================================== */
+
+    /* Durations */
+    --duration-instant: 0ms;
+    --duration-fast: 120ms;
+    --duration-base: 200ms;
+    --duration-smooth: 300ms;
+    --duration-slow: 450ms;
+    --duration-slower: 600ms;
+    --duration-carousel: 6000ms;
+
+    /* Easings */
+    --ease-linear: linear;
+    --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Stagger */
+    --stagger-base: 60ms;
+    --stagger-card: 80ms;
+    --stagger-section: 120ms;
+
+    /* Reduced motion overrides */
+    @media (prefers-reduced-motion: reduce) {
+      --duration-fast: 0ms;
+      --duration-base: 0ms;
+      --duration-smooth: 0ms;
+      --duration-slow: 0ms;
+      --duration-slower: 0ms;
+      --duration-carousel: 0ms;
+      --stagger-base: 0ms;
+      --stagger-card: 0ms;
+      --stagger-section: 0ms;
+    }
+
+    /* ==========================================================================
+       Z-INDEX SCALE
+       ========================================================================== */
+
+    --z-below: -1;
+    --z-base: 0;
+    --z-raised: 10;
+    --z-dropdown: 20;
+    --z-sticky: 30;
+    --z-modal-backdrop: 40;
+    --z-modal: 50;
+    --z-popover: 60;
+    --z-tooltip: 70;
+    --z-toast: 80;
+
+    /* ==========================================================================
+       BREAKPOINTS (Tailwind defaults, documented for reference)
+       ========================================================================== */
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+    --bp-2xl: 1536px;
+  }
+
+  /* ==========================================================================
+     COLLECTION ATMOSPHERE VARIABLES — Injected per-route
+     ========================================================================== */
+
+  .collection-monolith {
+    --collection-bg: var(--monolith-bg);
+    --collection-surface: var(--monolith-surface);
+    --collection-surface-elevated: var(--monolith-surface-elevated);
+    --collection-border: var(--monolith-border);
+    --collection-text-primary: var(--monolith-text-primary);
+    --collection-text-secondary: var(--monolith-text-secondary);
+    --collection-text-muted: var(--monolith-text-muted);
+    --collection-accent: var(--monolith-accent);
+    --collection-accent-hover: var(--monolith-accent-hover);
+    --collection-accent-subtle: var(--monolith-accent-subtle);
+    --collection-glow: var(--monolith-glow);
+    --collection-shadow: var(--monolith-shadow);
+    --collection-overlay: var(--monolith-overlay);
+    --focus-color: var(--monolith-accent);
+  }
+
+  .collection-lumen {
+    --collection-bg: var(--lumen-bg);
+    --collection-surface: var(--lumen-surface);
+    --collection-surface-elevated: var(--lumen-surface-elevated);
+    --collection-border: var(--lumen-border);
+    --collection-text-primary: var(--lumen-text-primary);
+    --collection-text-secondary: var(--lumen-text-secondary);
+    --collection-text-muted: var(--lumen-text-muted);
+    --collection-accent: var(--lumen-accent);
+    --collection-accent-hover: var(--lumen-accent-hover);
+    --collection-accent-subtle: var(--lumen-accent-subtle);
+    --collection-glow: var(--lumen-glow);
+    --collection-shadow: var(--lumen-shadow);
+    --collection-overlay: var(--lumen-overlay);
+    --focus-color: var(--lumen-accent);
+  }
+
+  .collection-strata {
+    --collection-bg: var(--strata-bg);
+    --collection-surface: var(--strata-surface);
+    --collection-surface-elevated: var(--strata-surface-elevated);
+    --collection-border: var(--strata-border);
+    --collection-text-primary: var(--strata-text-primary);
+    --collection-text-secondary: var(--strata-text-secondary);
+    --collection-text-muted: var(--strata-text-muted);
+    --collection-accent: var(--strata-accent);
+    --collection-accent-hover: var(--strata-accent-hover);
+    --collection-accent-subtle: var(--strata-accent-subtle);
+    --collection-glow: var(--strata-glow);
+    --collection-shadow: var(--strata-shadow);
+    --collection-overlay: var(--strata-overlay);
+    --focus-color: var(--strata-accent);
+  }
+
+  /* Global default (home, journal, about, checkout, etc.) */
+  :root:not(.collection-monolith):not(.collection-lumen):not(.collection-strata) {
+    --collection-bg: var(--solun-pearl-50);
+    --collection-surface: var(--solun-pearl-100);
+    --collection-surface-elevated: var(--solun-pearl-50);
+    --collection-border: var(--solun-sand-200);
+    --collection-text-primary: var(--solun-sand-950);
+    --collection-text-secondary: var(--solun-sand-600);
+    --collection-text-muted: var(--solun-sand-400);
+    --collection-accent: var(--solun-sand-900);
+    --collection-accent-hover: var(--solun-sand-950);
+    --collection-accent-subtle: var(--solun-sand-100);
+    --collection-glow: rgba(74, 63, 54, 0.08);
+    --collection-shadow: rgba(40, 33, 28, 0.06);
+    --collection-overlay: rgba(250, 249, 246, 0.9);
+    --focus-color: var(--solun-sand-900);
+  }
+}

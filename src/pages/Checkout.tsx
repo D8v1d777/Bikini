@@ -59,13 +59,11 @@ export function Checkout() {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-pearl-50 px-6">
+      <div className="min-h-screen flex items-center justify-center bg-collection-bg px-6">
         <div className="text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-medium text-sand-900 mb-4">Your Bag is Empty</h1>
-          <p className="text-sand-600 mb-8">Add something architectural to begin checkout.</p>
-          <button onClick={() => navigate('/collections')} className="px-6 py-3 bg-sand-900 text-pearl-50 font-medium rounded-md hover:bg-sand-950 transition-colors">
-            Continue Shopping
-          </button>
+          <h1 className="font-display text-4xl md:text-5xl font-medium text-collection-text-primary mb-4">Your Bag is Empty</h1>
+          <p className="text-collection-text-secondary mb-8">Add something architectural to begin checkout.</p>
+          <Button onClick={() => navigate('/collections')} variant="primary">Continue Shopping</Button>
         </div>
       </div>
     );
@@ -108,17 +106,17 @@ export function Checkout() {
   };
 
   return (
-    <div className="min-h-screen bg-pearl-50">
+    <div className="min-h-screen bg-collection-bg">
       {/* Progress Indicator */}
-      <nav className="bg-sand-950 px-6 py-4" aria-label="Checkout progress">
+      <nav className="bg-collection-surface px-6 py-4 border-b border-collection-border" aria-label="Checkout progress">
         <div className="max-w-3xl mx-auto">
           <ol className="flex items-center justify-center gap-4" role="list">
             {['shipping', 'review', 'confirmation'].map((s, index) => (
               <li key={s} className="flex items-center">
                 <div className={`flex items-center justify-center w-8 h-8 rounded-full text-sm font-medium transition-all ${
                   step === s || (step === 'review' && s === 'shipping') || (step === 'confirmation' && s !== 'confirmation')
-                    ? 'bg-sand-500 text-sand-950'
-                    : 'bg-sand-800 text-sand-400'
+                    ? 'bg-collection-accent text-collection-surface'
+                    : 'bg-collection-border text-collection-text-muted'
                 }`}>
                   {step === 'confirmation' && s !== 'confirmation' ? (
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
@@ -126,11 +124,11 @@ export function Checkout() {
                     </svg>
                   ) : index + 1}
                 </div>
-                <span className={`ml-2 text-sm font-medium ${step === s || (step === 'review' && s === 'shipping') || (step === 'confirmation' && s !== 'confirmation') ? 'text-pearl-50' : 'text-sand-400'}`}>
+                <span className={`ml-2 text-sm font-medium ${step === s || (step === 'review' && s === 'shipping') || (step === 'confirmation' && s !== 'confirmation') ? 'text-collection-text-primary' : 'text-collection-text-muted'}`}>
                   {s.charAt(0).toUpperCase() + s.slice(1)}
                 </span>
                 {index < 2 && (
-                  <div className={`mx-4 w-16 h-0.5 rounded ${(step === 'review' || step === 'confirmation') && index === 0 ? 'bg-sand-500' : (step === 'confirmation' && index === 1 ? 'bg-sand-500' : 'bg-sand-800')}`} />
+                  <div className={`mx-4 w-16 h-0.5 rounded ${(step === 'review' || step === 'confirmation') && index === 0 ? 'bg-collection-accent' : (step === 'confirmation' && index === 1 ? 'bg-collection-accent' : 'bg-collection-border')}`} />
                 )}
               </li>
             ))}
@@ -146,10 +144,10 @@ export function Checkout() {
             {/* Shipping Information */}
             <section aria-labelledby="shipping-heading" className={step === 'review' ? 'pointer-events-none opacity-50' : ''}>
               <header className="mb-8">
-                <h1 id="shipping-heading" className="font-display text-3xl font-medium text-sand-900">
+                <h1 id="shipping-heading" className="font-display text-3xl font-medium text-collection-text-primary">
                   {step === 'review' ? 'Review Your Order' : 'Shipping Information'}
                 </h1>
-                <p className="text-sand-600 mt-2">All fields required unless marked optional.</p>
+                <p className="text-collection-text-secondary mt-2">All fields required unless marked optional.</p>
               </header>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -244,13 +242,13 @@ export function Checkout() {
             </section>
 
             {/* Order Summary */}
-            <aside className="bg-sand-50 rounded-xl p-6 lg:sticky lg:top-24 space-y-6" aria-labelledby="summary-heading">
-              <h2 id="summary-heading" className="font-display text-xl font-medium text-sand-900">Order Summary</h2>
+            <aside className="bg-collection-surface-elevated rounded-xl p-6 lg:sticky lg:top-24 space-y-6 border border-collection-border" aria-labelledby="summary-heading">
+              <h2 id="summary-heading" className="font-display text-xl font-medium text-collection-text-primary">Order Summary</h2>
 
               <div className="space-y-4 max-h-64 overflow-y-auto pr-2">
                 {items.map((item: CartItem) => (
                   <div key={`${item.productId}-${item.colorId}-${item.sizeId}`} className="flex gap-3">
-                    <div className="relative w-16 h-16 flex-shrink-0 rounded-md overflow-hidden bg-sand-100">
+                    <div className="relative w-16 h-16 flex-shrink-0 rounded-md overflow-hidden bg-collection-border">
                       <img
                         src={item.color.images[0]}
                         alt={`${item.product.name} in ${item.color.name}`}
@@ -258,28 +256,28 @@ export function Checkout() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="font-medium text-sand-900 truncate">{item.product.name}</p>
-                      <p className="text-sm text-sand-500">{item.color.name} / {item.size.label}</p>
-                      <p className="font-medium text-sand-900">{formatPrice(item.product.price)} × {item.quantity}</p>
+                      <p className="font-medium text-collection-text-primary truncate">{item.product.name}</p>
+                      <p className="text-sm text-collection-text-muted">{item.color.name} / {item.size.label}</p>
+                      <p className="font-medium text-collection-text-primary">{formatPrice(item.product.price)} × {item.quantity}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="border-t border-sand-200 pt-4 space-y-3 text-sm">
-                <div className="flex justify-between text-sand-600">
+              <div className="border-t border-collection-border pt-4 space-y-3 text-sm">
+                <div className="flex justify-between text-collection-text-secondary">
                   <span>Subtotal ({totalItems} items)</span>
-                  <span className="font-medium text-sand-900">{formatPrice(subtotal)}</span>
+                  <span className="font-medium text-collection-text-primary">{formatPrice(subtotal)}</span>
                 </div>
-                <div className="flex justify-between text-sand-600">
+                <div className="flex justify-between text-collection-text-secondary">
                   <span>Shipping</span>
-                  <span className="font-medium text-sand-900">{shipping === 0 ? 'Complimentary' : formatPrice(shipping)}</span>
+                  <span className="font-medium text-collection-text-primary">{shipping === 0 ? 'Complimentary' : formatPrice(shipping)}</span>
                 </div>
-                <div className="flex justify-between text-sand-600">
+                <div className="flex justify-between text-collection-text-secondary">
                   <span>Estimated Tax</span>
-                  <span className="font-medium text-sand-900">{formatPrice(tax)}</span>
+                  <span className="font-medium text-collection-text-primary">{formatPrice(tax)}</span>
                 </div>
-                <div className="flex justify-between text-lg font-medium text-sand-900 pt-2 border-t border-sand-200">
+                <div className="flex justify-between text-lg font-medium text-collection-text-primary pt-2 border-t border-collection-border">
                   <span>Total</span>
                   <span>{formatPrice(total)}</span>
                 </div>
@@ -297,7 +295,7 @@ export function Checkout() {
                 </Button>
               )}
 
-              <p className="text-center text-xs text-sand-500">
+              <p className="text-center text-xs text-collection-text-muted">
                 This is a simulated checkout. No payment will be processed.
               </p>
             </aside>
@@ -311,41 +309,38 @@ export function Checkout() {
 function ConfirmationView({ orderNumber, total, email }: { orderNumber: string; total: number; email: string }) {
   return (
     <div className="text-center py-16">
-      <div className="w-20 h-20 mx-auto mb-8 bg-sand-100 rounded-full flex items-center justify-center">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4a3f36" strokeWidth="1.5">
+      <div className="w-20 h-20 mx-auto mb-8 bg-collection-accent-subtle rounded-full flex items-center justify-center">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--collection-accent)" strokeWidth="1.5">
           <circle cx="12" cy="12" r="10" />
           <path d="M9 12l2 2 4-4" />
         </svg>
       </div>
-      <h1 className="font-display text-4xl md:text-5xl font-medium text-sand-900 mb-4">Order Confirmed</h1>
-      <p className="text-sand-600 text-lg mb-8 max-w-md mx-auto">
-        Thank you for your order. A confirmation has been sent to <strong className="text-sand-900">{email}</strong>.
+      <h1 className="font-display text-4xl md:text-5xl font-medium text-collection-text-primary mb-4">Order Confirmed</h1>
+      <p className="text-collection-text-secondary text-lg mb-8 max-w-md mx-auto">
+        Thank you for your order. A confirmation has been sent to <strong className="text-collection-text-primary">{email}</strong>.
       </p>
-      <div className="bg-sand-100 rounded-xl p-6 mb-8 inline-block text-left min-w-[300px]">
+      <div className="bg-collection-surface-elevated rounded-xl p-6 mb-8 inline-block text-left min-w-[300px] border border-collection-border">
         <div className="space-y-3 text-sm">
           <div className="flex justify-between">
-            <span className="text-sand-600">Order Number</span>
-            <span className="font-mono font-medium text-sand-900">{orderNumber}</span>
+            <span className="text-collection-text-secondary">Order Number</span>
+            <span className="font-mono font-medium text-collection-text-primary">{orderNumber}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-sand-600">Total</span>
-            <span className="font-medium text-sand-900">{formatPrice(total)}</span>
+            <span className="text-collection-text-secondary">Total</span>
+            <span className="font-medium text-collection-text-primary">{formatPrice(total)}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-sand-600">Status</span>
-            <span className="font-medium text-teal-600">Confirmed (Simulated)</span>
+            <span className="text-collection-text-secondary">Status</span>
+            <span className="font-medium text-collection-accent">Confirmed (Simulated)</span>
           </div>
         </div>
       </div>
-      <p className="text-sand-500 text-sm mb-8">
+      <p className="text-collection-text-muted text-sm mb-8">
         This was a simulated checkout. No payment was processed and no order was placed.
       </p>
-      <button
-        onClick={() => window.location.href = '/'}
-        className="px-8 py-3 bg-sand-900 text-pearl-50 font-medium rounded-md hover:bg-sand-950 transition-colors"
-      >
+      <Button onClick={() => window.location.href = '/'} variant="primary" size="lg">
         Continue Shopping
-      </button>
+      </Button>
     </div>
   );
 }

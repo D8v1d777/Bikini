@@ -9,8 +9,8 @@ export const COLLECTIONS: Collection[] = [
     id: 'monolith',
     name: 'MONOLITH',
     description: 'Carved from shadow. The inaugural collection explores monolithic form — single-piece architecture, hardware-free closures, and a palette drawn from volcanic mineral.',
-    campaignImage: '/images/campaign/solun/monolith-editorial.webp',
-    campaignAlt: 'Monolith collection campaign — model in volcanic sand bikini against basalt formations',
+    campaignImage: '/images/campaign/solun/monolith-collection-hero.webp',
+    campaignAlt: 'Monolith collection landing — model in obsidian Monolith One-Piece against volcanic basalt, hard directional sunlight revealing garment architecture and rock texture, continuous strap loop creates leading line across frame, 16:10 frame allows full figure with headroom for collection title overlay',
     products: ['monolith-one', 'monolith-two', 'monolith-three'],
     color: '#4a3f36'
   },
@@ -18,8 +18,8 @@ export const COLLECTIONS: Collection[] = [
     id: 'lumen',
     name: 'LUMEN',
     description: 'Light as structure. Translucent layers, refractive edges, and a colour story of dawn on water. Fabric that catches and releases light with every movement.',
-    campaignImage: '/images/campaign/solun/lumen-coastal-blue.webp',
-    campaignAlt: 'Lumen collection campaign — model in pearlescent bikini at water\'s edge, morning light',
+    campaignImage: '/images/campaign/solun/lumen-collection-hero.webp',
+    campaignAlt: 'Lumen collection landing — model in pearl Lumen Refractive One-Piece at water\'s edge, soft diffuse morning light, double-layer refractive mesh visible with inner opaque silhouette through outer veil, perfect mirror water reflection, 16:10 frame with pale architectural pool environment',
     products: ['lumen-one', 'lumen-two', 'lumen-three'],
     color: '#e8e2d8'
   },
@@ -27,8 +27,8 @@ export const COLLECTIONS: Collection[] = [
     id: 'strata',
     name: 'STRATA',
     description: 'Sedimentary logic. Layered construction, tonal depth, and hardware inspired by geological folding. The most technical collection — built for motion, shaped by time.',
-    campaignImage: '/images/campaign/solun/strata-pool-editorial.webp',
-    campaignAlt: 'Strata collection campaign — model in layered terracotta bikini against sedimentary cliffs',
+    campaignImage: '/images/campaign/solun/strata-collection-hero.webp',
+    campaignAlt: 'Strata collection landing — model in terracotta/sienna/ochre Strata Layered One-Piece against sedimentary sandstone pool, golden hour side-light raking across three distinct rib weights, hand-oxidized brass hardware visible at side seams and strap slides, 16:10 frame with geological layering echoing garment bands',
     products: ['strata-one', 'strata-two', 'strata-three'],
     color: '#85735a'
   }
